@@ -26,6 +26,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSPhotoLibraryUsageDescription </key>
+	<string>Upload photos from library</string>
+	<key>NSCameraUsageDescription </key>
+	<string>Upload photos after capturing</string>
+	<key>NSMicrophoneUsageDescription  </key>
+	<string>Dont know why</string> 
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -62,10 +62,18 @@ class _MyHomePageState extends State<MyHomePage> {
         detectedText = null;
         _image = File(pickedFile.path);
         //detect changes
-        detectText(pickedFile.path).then((value) => setState(() {
-              detectedText = value;
-              print(detectedText);
-            }));
+        detectText(pickedFile.path).then(
+          (value) => setState(() {
+            detectedText = value;
+            print(detectedText);
+          }),
+          onError: (e) {
+            setState(() {
+              detectedText = e.message;
+              print(e.message);
+            });
+          },
+        );
       } else {
         print('No image selected.');
       }

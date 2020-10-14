@@ -2,13 +2,13 @@
 
 <div align="center">
   
-[![time tracker](https://wakatime.com/badge/github/Aman-zishan/DocScanner.svg)](https://wakatime.com/badge/github/Aman-zishan/textextractor)
-[![GitHub issues](https://img.shields.io/github/issues/Aman-zishan/DocScanner.svg)](https://GitHub.com/Aman-zishan/textextractor/issues/)
+[![time tracker](https://wakatime.com/badge/github/Aman-zishan/textextractor.svg)](https://wakatime.com/badge/github/Aman-zishan/textextractor)
+[![GitHub issues](https://img.shields.io/github/issues/Aman-zishan/textextractor.svg)](https://GitHub.com/Aman-zishan/textextractor/issues/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Aman-zishan/textextractor/issues)
-[![GitHub license](https://img.shields.io/github/license/Aman-zishan/DocScanner.svg)](https://github.com/Aman-zishan/textextractor/blob/master/LICENSE)
-[![HitCount](http://hits.dwyl.com/Aman-zishan/DocScanner.svg?style=flat)](http://hits.dwyl.com/Aman-zishan/textextractor)
-[![GitHub stars](https://img.shields.io/github/stars/Aman-zishan/DocScanner)](https://github.com/Aman-zishan/textextractor/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Aman-zishan/DocScanner)](https://github.com/Aman-zishan/textextractor/network/members)
+[![GitHub license](https://img.shields.io/github/license/Aman-zishan/textextractor.svg)](https://github.com/Aman-zishan/textextractor/blob/master/LICENSE)
+[![HitCount](http://hits.dwyl.com/Aman-zishan/textextractor.svg?style=flat)](http://hits.dwyl.com/Aman-zishan/textextractor)
+[![GitHub stars](https://img.shields.io/github/stars/Aman-zishan/textextractor)](https://github.com/Aman-zishan/textextractor/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Aman-zishan/textextractor)](https://github.com/Aman-zishan/textextractor/network/members)
 
 </div>
 

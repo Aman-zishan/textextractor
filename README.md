@@ -1,16 +1,49 @@
-# textextractor
+<p align="center"><img width="20%" height="20%" src="assets/images/logo.png"></p>
 
-A new Flutter project.
+<div align="center">
+  
+[![time tracker](https://wakatime.com/badge/github/Aman-zishan/DocScanner.svg)](https://wakatime.com/badge/github/Aman-zishan/textextractor)
+[![GitHub issues](https://img.shields.io/github/issues/Aman-zishan/DocScanner.svg)](https://GitHub.com/Aman-zishan/textextractor/issues/)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Aman-zishan/textextractor/issues)
+[![GitHub license](https://img.shields.io/github/license/Aman-zishan/DocScanner.svg)](https://github.com/Aman-zishan/textextractor/blob/master/LICENSE)
+[![HitCount](http://hits.dwyl.com/Aman-zishan/DocScanner.svg?style=flat)](http://hits.dwyl.com/Aman-zishan/textextractor)
+[![GitHub stars](https://img.shields.io/github/stars/Aman-zishan/DocScanner)](https://github.com/Aman-zishan/textextractor/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Aman-zishan/DocScanner)](https://github.com/Aman-zishan/textextractor/network/members)
 
-## Getting Started
+</div>
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+:bird: Flutter App to extract text from images (OCR tool).
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<p align="center"><img width="20%" height="20%" src="repo_files/demo.gif"></p>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+# Downloads:
+<!--
+<a href="https://apt.izzysoft.de/fdroid/index/apk/com.example.DocScanner"><img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" width="15%"></a>-->
+
+Please do check the [releases](https://github.com/Aman-zishan/textextractor/releases) for the source code along with APK version.
+
+
+## Features:
+
+* Performs OCR (Other Character Recognition) on uploaded images
+* Improved OCR
+* Save extracted text in a file
+
+
+
+## API used:
+                                       
+This application is built using the [api](http://textextractor2.herokuapp.com/api/v1) developed from the main application: [TextExtractor2.0](http://textextractor2.herokuapp.com/)
+
+## Contributors: :heart:
+
+- [Abhinav](https://github.com/AbhinavRajesh) - API
+- [Prakhar](https://github.com/Prakhar314) - Basic UI and functionality
+
+## Contribution
+
+Go through the [guidelines](https://github.com/Aman-zishan/textextractor/blob/master/CONTRIBUTING.md) and feel free to contribute to this open source project!
+
+

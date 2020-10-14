@@ -35,14 +35,18 @@ class _CustomAppBarState extends State<CustomAppBar> {
                     children: [
                       TextSpan(
                           text: "Text",
-                          style: TextStyle(color: Colors.deepOrange)),
-                      TextSpan(text: "Extractor2"),
+                          style: TextStyle(
+                              color: Colors.deepOrange, fontFamily: 'Poppins')),
+                      TextSpan(
+                          text: "Extractor2",
+                          style: TextStyle(fontFamily: 'Poppins')),
                       TextSpan(
                           text: ".",
                           style: TextStyle(color: Colors.deepOrange)),
                       TextSpan(text: "0"),
                     ],
                     style: TextStyle(
+                        fontFamily: 'Poppins',
                         fontWeight: FontWeight.w500,
                         fontSize: Theme.of(context)
                             .primaryTextTheme

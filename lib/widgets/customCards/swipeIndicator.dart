@@ -17,7 +17,7 @@ class SwipeIndicator extends StatelessWidget {
       //reflect along y > to <
       Transform(
           transform: Matrix4.rotationY(labelPosition == 0 ? 3.1415926535 : 0),
-          child: Icon(Icons.double_arrow)),
+          child: Icon(Icons.arrow_left)),
       //label for indicator
       Transform(
         transform:

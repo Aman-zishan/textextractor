@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:textextractor/data/detectText.dart';
 import 'package:textextractor/data/saveText.dart';
@@ -16,11 +16,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'TextExtractor',
       theme: ThemeData.dark().copyWith(accentColor: Colors.orange),
-      home: MyHomePage(),
+      home: new SplashScreen(),
     );
   }
+}
+
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => new _SplashScreenState();
 }
 
 class MyHomePage extends StatefulWidget {
@@ -29,6 +35,29 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  Future<bool> _onWillPop() {
+    return showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            elevation: 24.0,
+            title: Text('Are you sure?'),
+            content: Text('Do you want to exit'),
+            actions: <Widget>[
+              FlatButton(
+                onPressed: () => Navigator.of(context).pop(false),
+                child: Text('No'),
+              ),
+              FlatButton(
+                onPressed: () => exit(0),
+                /*Navigator.of(context).pop(true)*/
+                child: Text('Yes'),
+              ),
+            ],
+          ),
+        ) ??
+        false;
+  }
+
   File _image;
   String detectedText;
   final picker = ImagePicker();
@@ -89,56 +118,59 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppBar(),
-      body: LayoutBuilder(
-        builder: (_, constraints) {
-          return Container(
-              width: constraints.maxWidth,
-              child: Column(
-                // This column contains everything exept AppBar
+    return WillPopScope(
+      onWillPop: _onWillPop,
+      child: Scaffold(
+        appBar: CustomAppBar(),
+        body: LayoutBuilder(
+          builder: (_, constraints) {
+            return Container(
+                width: constraints.maxWidth,
+                child: Column(
+                  // This column contains everything exept AppBar
 
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  //Two buttons to call imagePicker
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    //Two buttons to call imagePicker
 
-                  ButtonBar(
-                    buttonPadding: EdgeInsets.all(0),
-                    buttonMinWidth: constraints.maxWidth / 2,
-                    buttonTextTheme: ButtonTextTheme.primary,
-                    children: [
-                      CustomButton(
-                          onPressed: () {
-                            getImage(ImageSource.camera);
-                          },
-                          text: " Camera",
-                          icon: Icon(Icons.camera_alt)),
-                      CustomButton(
-                          onPressed: () {
-                            getImage(ImageSource.gallery);
-                          },
-                          text: " Gallery",
-                          icon: Icon(Icons.filter))
-                    ],
-                  ),
+                    ButtonBar(
+                      buttonPadding: EdgeInsets.all(0),
+                      buttonMinWidth: constraints.maxWidth / 2,
+                      buttonTextTheme: ButtonTextTheme.primary,
+                      children: [
+                        CustomButton(
+                            onPressed: () {
+                              getImage(ImageSource.camera);
+                            },
+                            text: " Camera",
+                            icon: Icon(Icons.camera_alt)),
+                        CustomButton(
+                            onPressed: () {
+                              getImage(ImageSource.gallery);
+                            },
+                            text: " Gallery",
+                            icon: Icon(Icons.filter))
+                      ],
+                    ),
 
-                  // Horizontal List of cards to display image and detected text
-                  // change maxHeight and maxWidth inside cardList.dart to change size
-                  CardList(
-                    pageController: pc,
-                    maxHeight: constraints.maxHeight,
-                    maxWidth: constraints.maxWidth,
-                    onPageChange: (int index) {},
-                    imageFile: _image,
-                    text: detectedText,
-                  ),
+                    // Horizontal List of cards to display image and detected text
+                    // change maxHeight and maxWidth inside cardList.dart to change size
+                    CardList(
+                      pageController: pc,
+                      maxHeight: constraints.maxHeight,
+                      maxWidth: constraints.maxWidth,
+                      onPageChange: (int index) {},
+                      imageFile: _image,
+                      text: detectedText,
+                    ),
 
-                  // Button to finally download text
-                  DownloadButton(onPressed: (context) => saveFile(context))
-                ],
-              ));
-        },
+                    // Button to finally download text
+                    DownloadButton(onPressed: (context) => saveFile(context))
+                  ],
+                ));
+          },
+        ),
       ),
     );
   }
@@ -157,8 +189,29 @@ class DownloadButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(10),
       child: CustomButton(
         text: "Download Text",
-        icon: Icon(Icons.download_rounded),
+        icon: Icon(Icons.file_download),
         onPressed: () => onPressed(context),
+      ),
+    );
+  }
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(seconds: 3),
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => MyHomePage())));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      backgroundColor: Colors.black,
+      body: new Center(
+        child: new Image.asset('assets/images/logo.png'),
       ),
     );
   }

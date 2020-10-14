@@ -17,10 +17,10 @@ class _CustomButtonState extends State<CustomButton> {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-      textColor: _highlight ? Colors.orange : Colors.white,
+      textColor: _highlight ? Colors.deepOrange[400] : Colors.white,
       padding: EdgeInsets.all(18),
       onPressed: widget.onPressed,
-      color: Colors.orange,
+      color: Colors.deepOrange[400],
       highlightColor: Colors.white,
       onHighlightChanged: (high) => setState(() {
         _highlight = high;

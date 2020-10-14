@@ -37,7 +37,7 @@ class CardList extends StatelessWidget {
         child: imageFile != null
             ? Image.file(
                 imageFile,
-                fit: BoxFit.cover,
+                fit: BoxFit.contain,
               )
             : Image.network(
                 //TODO Image Placeholder
@@ -61,7 +61,7 @@ class CardList extends StatelessWidget {
                       ? AutoSizeText(
                           text,
                           maxFontSize: 20,
-                          minFontSize: 15,
+                          // minFontSize: 12,
                           style: TextStyle(
                             color: Colors.orange,
                           ),

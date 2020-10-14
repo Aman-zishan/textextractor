@@ -49,7 +49,12 @@ class _MyHomePageState extends State<MyHomePage> {
   // get Image
   Future getImage(ImageSource source) async {
     //get image
-    final pickedFile = await picker.getImage(source: source);
+    final pickedFile = await picker.getImage(
+      source: source,
+      // max 500p by 500p
+      maxHeight: 500,
+      maxWidth: 500,
+    );
     //change page
     pc.animateToPage(1, duration: Duration(seconds: 1), curve: Curves.easeIn);
     setState(() {
@@ -59,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //detect changes
         detectText(pickedFile.path).then((value) => setState(() {
               detectedText = value;
+              print(detectedText);
             }));
       } else {
         print('No image selected.');

@@ -1,12 +1,18 @@
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+import 'package:dio/dio.dart';
 
 Future<String> detectText(String imagePath) async {
-  var res = await http.get(
-      'https://baconipsum.com/api/?type=all-meat&sentences=1&start-with-lorem=1');
-  return Future.delayed(
-      Duration(
-        seconds: 5,
-      ),
-      () => json.decode(res.body)[0]);
+  // get filename
+  String fileName = imagePath.split('/').last;
+  // set formdata to post file
+  FormData formData = FormData.fromMap({
+    "file": await MultipartFile.fromFile(imagePath, filename: fileName),
+  });
+  // send post request
+  Dio dio = new Dio();
+  var response = await dio.post(
+    "http://textextractor2.herokuapp.com/api/v1/",
+    data: formData,
+  );
+  // retrun results
+  return response.data['message'];
 }

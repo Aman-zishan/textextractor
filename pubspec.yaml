@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   auto_size_text: ^2.1.0
   cupertino_icons: ^1.0.0
+  dio: ^3.0.10
   image_picker: ^0.6.7+11
   path_provider: ^1.6.18
   shimmer: ^1.1.1

@@ -2,7 +2,6 @@
 
 <div align="center">
   
-[![time tracker](https://wakatime.com/badge/github/Aman-zishan/textextractor.svg)](https://wakatime.com/badge/github/Aman-zishan/textextractor)
 [![GitHub issues](https://img.shields.io/github/issues/Aman-zishan/textextractor.svg)](https://GitHub.com/Aman-zishan/textextractor/issues/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Aman-zishan/textextractor/issues)
 [![GitHub license](https://img.shields.io/github/license/Aman-zishan/textextractor.svg)](https://github.com/Aman-zishan/textextractor/blob/master/LICENSE)

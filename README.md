@@ -18,8 +18,8 @@
 
 
 # Downloads:
-<!--
-<a href="https://apt.izzysoft.de/fdroid/index/apk/com.example.DocScanner"><img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" width="15%"></a>-->
+
+<a href="https://apt.izzysoft.de/fdroid/index/apk/com.example.textextractor"><img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" width="15%"></a>
 
 Please do check the [releases](https://github.com/Aman-zishan/textextractor/releases) for the source code along with APK version.
 

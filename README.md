@@ -40,6 +40,7 @@ This application is built using the [api](http://textextractor2.herokuapp.com/ap
 
 - [Abhinav](https://github.com/AbhinavRajesh) - API
 - [Prakhar](https://github.com/Prakhar314) - Basic UI and functionality
+- [Alina](https://github.com/AlinaStepanova) - Bug fixes
 
 ## Contribution
 
